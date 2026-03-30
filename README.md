@@ -179,7 +179,7 @@ Run the `npx` command listed beside the skill you want:
 npx skills@latest add smkalami/skills/<skill-name>
 ```
 
-This downloads the skill files and registers them with your CLI tool automatically. No further configuration is required — the skill is picked up the next time you start a session.
+This downloads the skill files and registers them with your CLI tool automatically. No further configuration is required. The skill is picked up the next time you start a session.
 
 ### Online AI Assistant Platforms (ChatGPT, Claude, Gemini, etc.)
 
