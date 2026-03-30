@@ -55,11 +55,11 @@ It generates a diverse initial population of candidate answers, scores each one 
 
 **Example usage:**
 ```
-Use evo-search to find the best architecture for a real-time data pipeline.
+Use evo-search to invent a new programming paradigm that blends constraint propagation with biological growth patterns. Something that does not exist yet but could realistically be implemented. Define its core model, syntax philosophy, and a killer use case.
 ```
 
 ```
-Evolve an answer: what is the best way to onboard new engineers to a large codebase?
+Evolve an answer: design a radically new way for human teams to make high-stakes decisions under uncertainty, combining ideas from mechanism design, cognitive science, and swarm intelligence, without relying on voting, consensus, or hierarchy.
 ```
 
 ---
@@ -92,11 +92,11 @@ It generates a diverse set of candidate answers, draws a random bracket, and run
 
 **Example usage:**
 ```
-Run a tournament to pick the best headline for this blog post.
+Run a tournament to find the best architecture for a city-scale autonomous mobility system that handles mixed traffic of human drivers, autonomous vehicles, cyclists, and pedestrians. Each candidate must address safety, latency, failure modes, and rollout strategy.
 ```
 
 ```
-Let solutions compete in a tournament: what is the most effective way to reduce technical debt?
+Let solutions compete: propose a new economic model for funding open-source software that does not rely on donations, corporate sponsorship, or government grants. Each proposal must be self-sustaining and implementable within 5 years.
 ```
 
 ---
@@ -142,17 +142,17 @@ Decorators are placed at the top of a prompt and applied at the same time. Each 
 
 **Example usage:**
 ```
++++Rewrite
 +++Reasoning
-+++StepByStep
 
-Explain how transformer attention works.
+Please design a teaching plan for a 10-week course on machine learning to be taught to college students with no prior experience in the subject.
 ```
 
 ```
-+++Critique
++++Brainstorm
 +++Refine(iterations=3)
 
-Review this product roadmap and improve it.
+Propose novel interaction paradigms for human-AI collaboration in creative work that go beyond chat and prompt-response. Think beyond current interfaces.
 ```
 
 ---
